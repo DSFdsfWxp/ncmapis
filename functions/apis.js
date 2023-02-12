@@ -3,7 +3,7 @@ export function onRequest(context){
     var worker = context.env.worker;
     try {
         const r = new URL(request.url);
-        return new Response(request.url)
+        return new Response(r.pathname)
         //const rr = Object.assign({},request);
         //console.log(pathname);
         /*
