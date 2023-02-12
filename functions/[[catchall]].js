@@ -11,7 +11,7 @@ export async function onRequest(context){
     };
     //var u = Array.isArray(context.params.catchall) ? (context.params.catchall.length!=0 ? context.params.catchall.join('/') : '/') : '/';
     //var r = new Request('https://ncmapis.dsfdsfwxp.workers.dev' + u + ur.search,o);
-    var r = new Request(request.url.replace('ncmapis.pages.dev','ncmapis.dsfdsfwxp.workers.dev'),o);
+    var r = new Request(request.url.replace('wnull-ncmapis.pages.dev','ncmapis.dsfdsfwxp.workers.dev'),o);
 
     return await worker.fetch(r)
 }
