@@ -19,7 +19,7 @@ export function onRequest(request){
           body: request.body
         }
         //console.log(rr);  + r.pathname.replace('/api/','/') + r.search, o
-        return fetch("https://wnull-ncmapi.vercel.app");
+        return fetch("https://wnull-ncmapi.vercel.app/");
       } catch(e) {
         return new Response(e, { status: 500 })
       }
