@@ -1,4 +1,4 @@
-export function onRequest(context){
+export async function onRequest(context){
     var request = context.request;
     var worker = context.env.worker;
     try {
@@ -21,8 +21,9 @@ export function onRequest(context){
           redirect: request.redirect,
           body: request.body
         }
+        
         //console.log(rr);  + r.pathname.replace('/apis/','/') + r.search, o
-        return fetch("https://wnull-ncmapi.vercel.app/");
+        return await fetch("https://wnull-ncmapi.vercel.app/");
       } catch(e) {
         return new Response(e, { status: 500 })
       }
