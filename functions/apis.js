@@ -18,8 +18,8 @@ export function onRequest(request){
           redirect: request.redirect,
           body: request.body
         }
-        //console.log(rr);
-        return fetch("https://wnull-ncmapi.vercel.app" + r.pathname.replace('/api/','/') + r.search, o);
+        //console.log(rr);  + r.pathname.replace('/api/','/') + r.search, o
+        return fetch("https://wnull-ncmapi.vercel.app");
       } catch(e) {
         return new Response(e, { status: 500 })
       }
